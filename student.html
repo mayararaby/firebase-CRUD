@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD-Student</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <!-- Firebase libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="./index.html">Education</a>
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="./student.html">Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./faculty.html">Faculty</a>
+            </li>
+
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="studentID" readonly="readonly" hidden>
+                </div>
+                <div class="form-group">
+                    <label for="PostText" class="form-label mt-4">First NAme</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="What is your first name?" required>
+                </div>
+                <div class="form-group">
+                    <label for="PostText" class="form-label mt-4">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="What is your last name?" required>
+                </div>
+                <div class="form-group">
+                    <label for="PostText" class="form-label mt-4">Age</label>
+                    <input type="number" class="form-control" id="studentAge" placeholder="What is your age?" required>
+                </div>
+                <div class="form-group">
+                    <label for="PostFeeling" class="form-label mt-4">Faculty</label>
+                    <select class="form-select" id="availableFaculties" required>
+                    </select>
+                </div>
+                <br>
+                <button type="button" class="btn btn-primary" onclick="AddStudent()">Add student</button>
+            </div>
+            <br><br><br><br>
+            <table class="table table-hover mt-5" id="AllStudents">
+                <thead>
+                    <tr>
+                        <th scope="col">First name</th>
+                        <th scope="col">Last name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Faculty</th>
+                        <th scope="col">Options</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./js/student.js"></script>
+</body>
+
+</html>

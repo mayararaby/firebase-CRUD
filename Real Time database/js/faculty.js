@@ -1,10 +1,12 @@
+var path = config.linkPath;
+
 $(function() {
     GetAllFaculties();
 })
 
 function GetAllFaculties() {
     $.ajax({
-        url: "https://education-cc687-default-rtdb.firebaseio.com/faculty.json",
+        url: `https://education-cc687-default-rtdb.firebaseio.com/${path}`,
         method: "GET",
         dataType: "JSON",
         success: function(data) {
@@ -32,7 +34,7 @@ function AddFaculty() {
     var data = { name: name, address: address };
 
     $.ajax({
-        url: "https://education-cc687-default-rtdb.firebaseio.com/faculty.json",
+        url: `https://education-cc687-default-rtdb.firebaseio.com/${path}`,
         method: "POST",
         contentType: "application/json",
         dataType: "JSON",

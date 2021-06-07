@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD-Student</title>
+    <title>Add-Faculty</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -19,9 +19,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <!-- Firebase libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+    <script src="./js/faculty.js"></script>
+    <script src="./config.js"></script>
 </head>
 
 <body>
@@ -36,45 +35,28 @@
             <li class="nav-item">
                 <a class="nav-link" href="./faculty.html">Faculty</a>
             </li>
-
         </ul>
     </nav>
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="studentID" readonly="readonly" hidden>
+                    <label for="PostText" class="form-label mt-4">Name</label>
+                    <input type="text" class="form-control" id="facultyName" placeholder="What is faculty name?" required>
                 </div>
                 <div class="form-group">
-                    <label for="PostText" class="form-label mt-4">First NAme</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="What is your first name?" required>
-                </div>
-                <div class="form-group">
-                    <label for="PostText" class="form-label mt-4">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="What is your last name?" required>
-                </div>
-                <div class="form-group">
-                    <label for="PostText" class="form-label mt-4">Age</label>
-                    <input type="number" class="form-control" id="studentAge" placeholder="What is your age?" required>
-                </div>
-                <div class="form-group">
-                    <label for="PostFeeling" class="form-label mt-4">Faculty</label>
-                    <select class="form-select" id="availableFaculties" required>
-                    </select>
+                    <label for="PostText" class="form-label mt-4">Address</label>
+                    <input type="text" class="form-control" id="facultyAddress" placeholder="What is faculty address?" required>
                 </div>
                 <br>
-                <button type="button" class="btn btn-primary" onclick="AddStudent()">Add student</button>
+                <button type="button" class="btn btn-primary" onclick="AddFaculty()">Add faculty</button>
             </div>
             <br><br><br><br>
-            <table class="table table-hover mt-5" id="AllStudents">
+            <table class="table table-hover mt-5" id="AllFaculties">
                 <thead>
                     <tr>
-                        <th scope="col">First name</th>
-                        <th scope="col">Last name</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Faculty</th>
-                        <th scope="col">Options</th>
-
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -82,7 +64,7 @@
             </table>
         </div>
     </div>
-    <script src="./js/student.js"></script>
+
 </body>
 
 </html>

@@ -1,12 +1,4 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyBHXPPUAAQeKLbWvk8giV_oBKuLIIXwAe8",
-    authDomain: "education-cc687.firebaseapp.com",
-    projectId: "education-cc687",
-    storageBucket: "education-cc687.appspot.com",
-    messagingSenderId: "187289243283",
-    appId: "1:187289243283:web:b4ab9f74ad0d9a114fc766",
-    measurementId: "G-GZN4NCE4HS"
-};
+var firebaseConfig = config.firebaseConfig;
 
 firebase.initializeApp(firebaseConfig);
 var database = firebase.database();

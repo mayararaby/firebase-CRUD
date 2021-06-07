@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add-Faculty</title>
+    <title>Education</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -19,7 +19,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <script src="./js/faculty.js"></script>
 </head>
 
 <body>
@@ -34,33 +33,20 @@
             <li class="nav-item">
                 <a class="nav-link" href="./faculty.html">Faculty</a>
             </li>
+
         </ul>
     </nav>
+    <div class="container-fluid">
+
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
-                <div class="form-group">
-                    <label for="PostText" class="form-label mt-4">Name</label>
-                    <input type="text" class="form-control" id="facultyName" placeholder="What is faculty name?" required>
+                <div class="btn-group btn-group-lg d-flex justify-content-center pt-5">
+                    <a href="./faculty.html" target="_blank" class="btn btn-primary">Faculty</a>
+                    <a href="./student.html" target="_blank" class="btn btn-success">Student</a>
                 </div>
-                <div class="form-group">
-                    <label for="PostText" class="form-label mt-4">Address</label>
-                    <input type="text" class="form-control" id="facultyAddress" placeholder="What is faculty address?" required>
-                </div>
-                <br>
-                <button type="button" class="btn btn-primary" onclick="AddFaculty()">Add faculty</button>
             </div>
-            <br><br><br><br>
-            <table class="table table-hover mt-5" id="AllFaculties">
-                <thead>
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Address</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
         </div>
     </div>
 
